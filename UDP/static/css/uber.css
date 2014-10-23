@@ -1,0 +1,95 @@
+/* prop: top right bottom left; */
+/* available font names:
+        FuturaT-Book
+        FuturaT-BookOblique
+        FuturaT-Bold
+        FuturaT-BoldOblique
+        FuturaT-Demi
+        FuturaT-DemiOblique
+        FuturaT-ExtraBold
+        FuturaT-ExtraBoldOblique
+        FuturaT-Light
+        FuturaT-LightOblique
+        FuturaT-Medium
+        FuturaT-MediumOblique */
+body {
+    margin:0px 0px;
+    padding:0px;
+    text-align:center;
+    font-family: 'FuturaT-Light', Arial, sans-serif;
+    font-size: 1em;
+    color: #000000;
+}
+	
+#uber {
+	width:60%;
+	margin:0px auto;
+	text-align:left;
+	padding:15px;
+	}
+
+#uber div.column {
+    float:left;
+    width:48%;
+    margin: 1%;
+}
+
+
+table {
+    table-layout:fixed;
+    width:98%;
+    margin: 1em 1em 1em 1em;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0;
+}
+
+table td.label {
+    font-family: 'FuturaT-Demi', Arial, sans-serif;
+    font-size: 0.75em;
+}
+
+table th {
+    font-family: 'FuturaT-DemiOblique', Arial, sans-serif;
+    text-align:left;
+}
+
+#stream table td {
+    width:4%;
+}
+
+#stream table td.label.row {
+    font-family: 'FuturaT-DemiOblique', Arial, sans-serif;
+}
+
+#file table.template {
+    display:none;
+}
+
+#file td.data_cell {
+    background-color: #FB5B1F;
+    position:relative;
+}
+
+#file table td.label {
+    font-family: 'FuturaT-Light', Arial, sans-serif;
+    font-size: 1em;
+}
+
+#file table td.label.row {
+    line-height:100%;
+    width:1%;
+}
+
+#file div.data_bar {
+    background-color: #ffffff;
+    position:absolute;
+    width:100%;
+    left:0px;
+}
+
+
+
+

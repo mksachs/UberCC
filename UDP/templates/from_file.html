@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+
+
+    <title>From file</title>
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+    <!-- Page initilization script -->
+    <script type="text/javascript">
+        /*
+        This script takes the data returned by the API and creates table-based
+        plots.
+        */
+        $(document).ready(function(){
+            max_y_val = 70;
+            forecast = JSON.parse({{ forecast|tojson|safe }});
+            for ( key in forecast ) {
+                curr_table = $("table.dayPlot.template").clone().appendTo("body");
+                curr_table.removeClass("template");
+                curr_table.show();
+                curr_table.find("th").text(forecast[key].display_date)
+                curr_table.find("tr.data_row td").each(function(index) {
+                    if ( ! $(this).hasClass("label") ) {
+                        $(this).attr("rowspan",max_y_val+1)
+                    } else {
+                        $(this).text(max_y_val);
+                    }
+                });
+                for ( var i = max_y_val - 5; i >= 0; i -= 5) {
+                    curr_table.children("tbody").append("<tr><td class=\"label row\">"+i+"</td></tr>");
+                }
+                forecast_vals = forecast[key].forecasts
+                curr_table.find("td.data_cell").each(function(index) {
+                    $(this).append("<div class=\"data_bar\"></div>");
+                    bar_height = (1.0 - forecast_vals[index]/max_y_val) * 100.0;
+                    $(this).children(".data_bar").css({"width":"100%", "height":bar_height+"%", "top":0});
+                });
+            }
+        });
+    </script>
+    
+    <!-- Stylesheets -->
+    <link href="../static/fonts/FuturaT/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/uber.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body id="file">
+
+<table class="dayPlot template">
+    <thead>
+        <tr>
+            <th colspan="24">Monday, Janurary 5</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr class="data_row">
+        <td class="label row"></td>
+        <td class="h0 data_cell"></td>
+        <td class="h1 data_cell"></td>
+        <td class="h2 data_cell"></td>
+        <td class="h3 data_cell"></td>
+        <td class="h4 data_cell"></td>
+        <td class="h5 data_cell"></td>
+        <td class="h6 data_cell"></td>
+        <td class="h7 data_cell"></td>
+        <td class="h8 data_cell"></td>
+        <td class="h9 data_cell"></td>
+        <td class="h10 data_cell"></td>
+        <td class="h11 data_cell"></td>
+        <td class="h12 data_cell"></td>
+        <td class="h13 data_cell"></td>
+        <td class="h14 data_cell"></td>
+        <td class="h15 data_cell"></td>
+        <td class="h16 data_cell"></td>
+        <td class="h17 data_cell"></td>
+        <td class="h18 data_cell"></td>
+        <td class="h19 data_cell"></td>
+        <td class="h20 data_cell"></td>
+        <td class="h21 data_cell"></td>
+        <td class="h22 data_cell"></td>
+        <td class="h23 data_cell"></td>
+    </tr>
+    </tbody>
+    
+    <tfoot>
+        <tr>
+            <td class="spacer"></td>
+            <td class="label column">0</td>
+            <td class="label column">1</td>
+            <td class="label column">2</td>
+            <td class="label column">3</td>
+            <td class="label column">4</td>
+            <td class="label column">5</td>
+            <td class="label column">6</td>
+            <td class="label column">7</td>
+            <td class="label column">8</td>
+            <td class="label column">9</td>
+            <td class="label column">10</td>
+            <td class="label column">11</td>
+            <td class="label column">12</td>
+            <td class="label column">13</td>
+            <td class="label column">14</td>
+            <td class="label column">15</td>
+            <td class="label column">16</td>
+            <td class="label column">17</td>
+            <td class="label column">18</td>
+            <td class="label column">19</td>
+            <td class="label column">20</td>
+            <td class="label column">21</td>
+            <td class="label column">22</td>
+            <td class="label column">23</td>
+        </tr>
+    </tfoot>
+    
+</table>
+
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+
+
+    <title>From stream</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    /*
+    Use server event to update the data.
+    */
+    var source = new EventSource('/from_stream');
+    source.onmessage = function (event) {
+        data = JSON.parse(event.data);
+        $("#d" + data.day + " .h"+data.hour).text(data.forecast.toFixed(2));
+    };
+    </script>
+    <link href="fonts/FuturaT/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="css/uber.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body id="stream">
+
+<table id="d0">
+    <thead>
+        <tr>
+            <th colspan="24">Monday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="label row">hour</td>
+            <td class="label">0</td>
+            <td class="label">1</td>
+            <td class="label">2</td>
+            <td class="label">3</td>
+            <td class="label">4</td>
+            <td class="label">5</td>
+            <td class="label">6</td>
+            <td class="label">7</td>
+            <td class="label">8</td>
+            <td class="label">9</td>
+            <td class="label">10</td>
+            <td class="label">11</td>
+            <td class="label">12</td>
+            <td class="label">13</td>
+            <td class="label">14</td>
+            <td class="label">15</td>
+            <td class="label">16</td>
+            <td class="label">17</td>
+            <td class="label">18</td>
+            <td class="label">19</td>
+            <td class="label">20</td>
+            <td class="label">21</td>
+            <td class="label">22</td>
+            <td class="label">23</td>
+        </tr>
+        <tr>
+            <td class="label row"># logins</td>
+            <td class="h0">-</td>
+            <td class="h1">-</td>
+            <td class="h2">-</td>
+            <td class="h3">-</td>
+            <td class="h4">-</td>
+            <td class="h5">-</td>
+            <td class="h6">-</td>
+            <td class="h7">-</td>
+            <td class="h8">-</td>
+            <td class="h9">-</td>
+            <td class="h10">-</td>
+            <td class="h11">-</td>
+            <td class="h12">-</td>
+            <td class="h13">-</td>
+            <td class="h14">-</td>
+            <td class="h15">-</td>
+            <td class="h16">-</td>
+            <td class="h17">-</td>
+            <td class="h18">-</td>
+            <td class="h19">-</td>
+            <td class="h20">-</td>
+            <td class="h21">-</td>
+            <td class="h22">-</td>
+            <td class="h23">-</td>
+        </tr>
+
+    </tbody>
+</table>
+<table id="d1">
+    <thead>
+        <tr>
+            <th colspan="24">Tuesday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="label row">hour</td>
+            <td class="label">0</td>
+            <td class="label">1</td>
+            <td class="label">2</td>
+            <td class="label">3</td>
+            <td class="label">4</td>
+            <td class="label">5</td>
+            <td class="label">6</td>
+            <td class="label">7</td>
+            <td class="label">8</td>
+            <td class="label">9</td>
+            <td class="label">10</td>
+            <td class="label">11</td>
+            <td class="label">12</td>
+            <td class="label">13</td>
+            <td class="label">14</td>
+            <td class="label">15</td>
+            <td class="label">16</td>
+            <td class="label">17</td>
+            <td class="label">18</td>
+            <td class="label">19</td>
+            <td class="label">20</td>
+            <td class="label">21</td>
+            <td class="label">22</td>
+            <td class="label">23</td>
+        </tr>
+        <tr>
+            <td class="label row"># logins</td>
+            <td class="h0">-</td>
+            <td class="h1">-</td>
+            <td class="h2">-</td>
+            <td class="h3">-</td>
+            <td class="h4">-</td>
+            <td class="h5">-</td>
+            <td class="h6">-</td>
+            <td class="h7">-</td>
+            <td class="h8">-</td>
+            <td class="h9">-</td>
+            <td class="h10">-</td>
+            <td class="h11">-</td>
+            <td class="h12">-</td>
+            <td class="h13">-</td>
+            <td class="h14">-</td>
+            <td class="h15">-</td>
+            <td class="h16">-</td>
+            <td class="h17">-</td>
+            <td class="h18">-</td>
+            <td class="h19">-</td>
+            <td class="h20">-</td>
+            <td class="h21">-</td>
+            <td class="h22">-</td>
+            <td class="h23">-</td>
+        </tr>
+    </tbody>
+</table>
+<table id="d2">
+    <thead>
+        <tr>
+            <th colspan="24">Wednesday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="label row">hour</td>
+            <td class="label">0</td>
+            <td class="label">1</td>
+            <td class="label">2</td>
+            <td class="label">3</td>
+            <td class="label">4</td>
+            <td class="label">5</td>
+            <td class="label">6</td>
+            <td class="label">7</td>
+            <td class="label">8</td>
+            <td class="label">9</td>
+            <td class="label">10</td>
+            <td class="label">11</td>
+            <td class="label">12</td>
+            <td class="label">13</td>
+            <td class="label">14</td>
+            <td class="label">15</td>
+            <td class="label">16</td>
+            <td class="label">17</td>
+            <td class="label">18</td>
+            <td class="label">19</td>
+            <td class="label">20</td>
+            <td class="label">21</td>
+            <td class="label">22</td>
+            <td class="label">23</td>
+        </tr>
+        <tr>
+            <td class="label row"># logins</td>
+            <td class="h0">-</td>
+            <td class="h1">-</td>
+            <td class="h2">-</td>
+            <td class="h3">-</td>
+            <td class="h4">-</td>
+            <td class="h5">-</td>
+            <td class="h6">-</td>
+            <td class="h7">-</td>
+            <td class="h8">-</td>
+            <td class="h9">-</td>
+            <td class="h10">-</td>
+            <td class="h11">-</td>
+            <td class="h12">-</td>
+            <td class="h13">-</td>
+            <td class="h14">-</td>
+            <td class="h15">-</td>
+            <td class="h16">-</td>
+            <td class="h17">-</td>
+            <td class="h18">-</td>
+            <td class="h19">-</td>
+            <td class="h20">-</td>
+            <td class="h21">-</td>
+            <td class="h22">-</td>
+            <td class="h23">-</td>
+        </tr>
+    </tbody>
+</table>
+<table id="d3">
+    <thead>
+        <tr>
+            <th colspan="24">Thursday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="label row">hour</td>
+            <td class="label">0</td>
+            <td class="label">1</td>
+            <td class="label">2</td>
+            <td class="label">3</td>
+            <td class="label">4</td>
+            <td class="label">5</td>
+            <td class="label">6</td>
+            <td class="label">7</td>
+            <td class="label">8</td>
+            <td class="label">9</td>
+            <td class="label">10</td>
+            <td class="label">11</td>
+            <td class="label">12</td>
+            <td class="label">13</td>
+            <td class="label">14</td>
+            <td class="label">15</td>
+            <td class="label">16</td>
+            <td class="label">17</td>
+            <td class="label">18</td>
+            <td class="label">19</td>
+            <td class="label">20</td>
+            <td class="label">21</td>
+            <td class="label">22</td>
+            <td class="label">23</td>
+        </tr>
+        <tr>
+            <td class="label row"># logins</td>
+            <td class="h0">-</td>
+            <td class="h1">-</td>
+            <td class="h2">-</td>
+            <td class="h3">-</td>
+            <td class="h4">-</td>
+            <td class="h5">-</td>
+            <td class="h6">-</td>
+            <td class="h7">-</td>
+            <td class="h8">-</td>
+            <td class="h9">-</td>
+            <td class="h10">-</td>
+            <td class="h11">-</td>
+            <td class="h12">-</td>
+            <td class="h13">-</td>
+            <td class="h14">-</td>
+            <td class="h15">-</td>
+            <td class="h16">-</td>
+            <td class="h17">-</td>
+            <td class="h18">-</td>
+            <td class="h19">-</td>
+            <td class="h20">-</td>
+            <td class="h21">-</td>
+            <td class="h22">-</td>
+            <td class="h23">-</td>
+        </tr>
+    </tbody>
+</table>
+<table id="d4">
+    <thead>
+        <tr>
+            <th colspan="24">Friday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="label row">hour</td>
+            <td class="label">0</td>
+            <td class="label">1</td>
+            <td class="label">2</td>
+            <td class="label">3</td>
+            <td class="label">4</td>
+            <td class="label">5</td>
+            <td class="label">6</td>
+            <td class="label">7</td>
+            <td class="label">8</td>
+            <td class="label">9</td>
+            <td class="label">10</td>
+            <td class="label">11</td>
+            <td class="label">12</td>
+            <td class="label">13</td>
+            <td class="label">14</td>
+            <td class="label">15</td>
+            <td class="label">16</td>
+            <td class="label">17</td>
+            <td class="label">18</td>
+            <td class="label">19</td>
+            <td class="label">20</td>
+            <td class="label">21</td>
+            <td class="label">22</td>
+            <td class="label">23</td>
+        </tr>
+        <tr>
+            <td class="label row"># logins</td>
+            <td class="h0">-</td>
+            <td class="h1">-</td>
+            <td class="h2">-</td>
+            <td class="h3">-</td>
+            <td class="h4">-</td>
+            <td class="h5">-</td>
+            <td class="h6">-</td>
+            <td class="h7">-</td>
+            <td class="h8">-</td>
+            <td class="h9">-</td>
+            <td class="h10">-</td>
+            <td class="h11">-</td>
+            <td class="h12">-</td>
+            <td class="h13">-</td>
+            <td class="h14">-</td>
+            <td class="h15">-</td>
+            <td class="h16">-</td>
+            <td class="h17">-</td>
+            <td class="h18">-</td>
+            <td class="h19">-</td>
+            <td class="h20">-</td>
+            <td class="h21">-</td>
+            <td class="h22">-</td>
+            <td class="h23">-</td>
+        </tr>
+    </tbody>
+</table>
+<table id="d5">
+    <thead>
+        <tr>
+            <th colspan="24">Saturday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="label row">hour</td>
+            <td class="label">0</td>
+            <td class="label">1</td>
+            <td class="label">2</td>
+            <td class="label">3</td>
+            <td class="label">4</td>
+            <td class="label">5</td>
+            <td class="label">6</td>
+            <td class="label">7</td>
+            <td class="label">8</td>
+            <td class="label">9</td>
+            <td class="label">10</td>
+            <td class="label">11</td>
+            <td class="label">12</td>
+            <td class="label">13</td>
+            <td class="label">14</td>
+            <td class="label">15</td>
+            <td class="label">16</td>
+            <td class="label">17</td>
+            <td class="label">18</td>
+            <td class="label">19</td>
+            <td class="label">20</td>
+            <td class="label">21</td>
+            <td class="label">22</td>
+            <td class="label">23</td>
+        </tr>
+        <tr>
+            <td class="label row"># logins</td>
+            <td class="h0">-</td>
+            <td class="h1">-</td>
+            <td class="h2">-</td>
+            <td class="h3">-</td>
+            <td class="h4">-</td>
+            <td class="h5">-</td>
+            <td class="h6">-</td>
+            <td class="h7">-</td>
+            <td class="h8">-</td>
+            <td class="h9">-</td>
+            <td class="h10">-</td>
+            <td class="h11">-</td>
+            <td class="h12">-</td>
+            <td class="h13">-</td>
+            <td class="h14">-</td>
+            <td class="h15">-</td>
+            <td class="h16">-</td>
+            <td class="h17">-</td>
+            <td class="h18">-</td>
+            <td class="h19">-</td>
+            <td class="h20">-</td>
+            <td class="h21">-</td>
+            <td class="h22">-</td>
+            <td class="h23">-</td>
+        </tr>
+    </tbody>
+</table>
+<table id="d6">
+    <thead>
+        <tr>
+            <th colspan="24">Sunday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="label row">hour</td>
+            <td class="label">0</td>
+            <td class="label">1</td>
+            <td class="label">2</td>
+            <td class="label">3</td>
+            <td class="label">4</td>
+            <td class="label">5</td>
+            <td class="label">6</td>
+            <td class="label">7</td>
+            <td class="label">8</td>
+            <td class="label">9</td>
+            <td class="label">10</td>
+            <td class="label">11</td>
+            <td class="label">12</td>
+            <td class="label">13</td>
+            <td class="label">14</td>
+            <td class="label">15</td>
+            <td class="label">16</td>
+            <td class="label">17</td>
+            <td class="label">18</td>
+            <td class="label">19</td>
+            <td class="label">20</td>
+            <td class="label">21</td>
+            <td class="label">22</td>
+            <td class="label">23</td>
+        </tr>
+        <tr>
+            <td class="label row"># logins</td>
+            <td class="h0">-</td>
+            <td class="h1">-</td>
+            <td class="h2">-</td>
+            <td class="h3">-</td>
+            <td class="h4">-</td>
+            <td class="h5">-</td>
+            <td class="h6">-</td>
+            <td class="h7">-</td>
+            <td class="h8">-</td>
+            <td class="h9">-</td>
+            <td class="h10">-</td>
+            <td class="h11">-</td>
+            <td class="h12">-</td>
+            <td class="h13">-</td>
+            <td class="h14">-</td>
+            <td class="h15">-</td>
+            <td class="h16">-</td>
+            <td class="h17">-</td>
+            <td class="h18">-</td>
+            <td class="h19">-</td>
+            <td class="h20">-</td>
+            <td class="h21">-</td>
+            <td class="h22">-</td>
+            <td class="h23">-</td>
+        </tr>
+    </tbody>
+</table>
+
+<button onclick="source.close()">Stop stream</button>
+
+</body>
+</html>

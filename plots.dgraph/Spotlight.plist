@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Labels</key>
+	<string># of logins
+date
+ vs date
+
+# of logins
+count vs date
+date
+ vs date
+
+# of logins
+count vs date
+ vs date
+
+# of logins
+count vs date
+ vs date
+count vs date
+
+days
+% power
+power vs days
+
+days
+% power
+power vs days
+
+# logins in one hour (L)
+normalized cumulative frequency
+Fit of freq vs count
+
+{\it h_n }
+pe_6_168 vs date
+pe_4_336 vs date
+pe_5_336 vs date
+pe_6_336 vs date
+pe_7_336 vs date
+pe_8_336 vs date
+{\it n} = 4
+{\it n} = 5
+{\it n} = 6
+{\it n} = 7
+{\it n} = 8
+</string>
+	<key>Text</key>
+	<string></string>
+</dict>
+</plist>

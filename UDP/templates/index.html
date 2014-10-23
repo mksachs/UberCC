@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+
+
+    <title>Uber Demand Prediction</title>
+    
+    <!-- Stylesheets -->
+    <link href="../static/fonts/FuturaT/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/uber.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body id="index">
+
+<div id="uber">
+
+<div class="column">
+    <h1>Load the login data from a file</h1>
+    <p>
+    This API loads the login data from a file (provided as a GET parameter on the url), parses it, and returns the forecast for May 1 2012 - May 15 2012. The forecasts are displayed as a series of table-based plots for each hour of each day in the interval.
+    </p>
+    <p>
+    <a href="{{ links.from_file }}">Go!</a>
+    </p>
+</div>
+
+<div class="column">
+    <h1>Process streamed login data.</h1>
+    <p>
+    This API uses the same forecasting engine as the load from file API but with streamed data. A fake stream is set up (just a loop through the provided data) and forecasts are delivered as they become available. Because the basic forecast is for any week given the input data, all that is displayed is the counts per hour for one week.
+    </p>
+    <p>
+    <a href="{{ links.from_stream }}">Go!</a>
+    </p>
+</div>
+
+</div>
+
+</body>
+</html>
